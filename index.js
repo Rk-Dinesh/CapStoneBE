@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 //routes
-readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
+readdirSync('./routes').map((route) => app.use('/', require('./routes/' + route)))
 // ...
 
 // const routeFiles = fs.readdirSync('./routes').filter(file => path.extname(file) === '.js');
