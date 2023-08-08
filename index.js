@@ -22,7 +22,7 @@ app.use(cors())
 const routeFiles = fs.readdirSync('./routes').filter(file => path.extname(file) === '.js');
 
 routeFiles.forEach((route) => {
-  const routeModule = require(`./routes/${route}`);
+  const routeModule = require(`./routes${route}`);
   app.use('/api/v1', routeModule);
 });
 
